@@ -20,16 +20,15 @@ const option0 = document.querySelector("option");
 option0.setAttribute("selected", "");
 
 let timer,
-    maxTime = parseInt(selectTime.value), // Initialize maxTime with the selected value
+    maxTime = parseInt(selectTime.value),
     timeLeft = maxTime,
     charIndex = (mistakes = isTyping = 0);
 
-// Function to handle changes in the selected time
 selectTime.addEventListener("change", function () {
-    maxTime = 60 * parseInt(selectTime.value); // Update maxTime with the selected value
-    timeLeft = maxTime; // Reset the time left
-    timeTag.innerText = timeLeft; // Update time displayed in UI
-    resetGame(); // Reset the game with the new time
+    maxTime = 60 * parseInt(selectTime.value);
+    timeLeft = maxTime;
+    timeTag.innerText = timeLeft;
+    resetGame();
 });
 
 function loadParagraph() {
